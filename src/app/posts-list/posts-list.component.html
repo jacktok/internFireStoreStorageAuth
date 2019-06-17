@@ -1,0 +1,7 @@
+<p>
+    posts-list works!
+</p>
+
+<div *ngFor="let post of postList | async">
+    <pre>{{ post | json }}</pre>
+</div>

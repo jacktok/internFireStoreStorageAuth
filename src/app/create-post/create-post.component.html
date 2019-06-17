@@ -1,0 +1,18 @@
+<p>
+    create-post works!
+</p>
+<div>
+    <label>Update load file </label>
+    <input type="file" #file>
+    <button [disabled]="disableUpload" (click)="upload(file)">upload</button>
+</div>
+<div *ngFor="let fileLink of fileList">
+    <!-- {{ fileLink}} -->
+    <app-image-preview [filePath]="fileLink"></app-image-preview>
+</div>
+<div class="row">
+    <div class="column">
+        <textarea [(ngModel)]="content"></textarea>
+    </div>
+    <div class="column" [innerHTML]="content"></div>
+</div>

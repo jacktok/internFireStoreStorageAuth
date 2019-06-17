@@ -1,4 +1,10 @@
 import { Component } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { auth } from 'firebase';
+import { AuthService } from './auth.service';
+import { Observable } from 'rxjs';
+import { User } from './user';
+import { PostService } from './post.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +12,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'intern2019';
+  
+  user: Observable<User>
+  
+  constructor(public  authService: AuthService, private postService: PostService) {
+    this.user = authService.user
+  }
+  login() {
+    this.authService.googleLogin()
+  }
+  logout() {
+    this.authService.singOut()
+  }
+
 }
