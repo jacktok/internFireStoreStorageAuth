@@ -1,26 +1,33 @@
 * {
-    box-sizing: border-box;
+  color: #333333;
 }
 
-.column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    height: 300px;
-    /* Should be removed. Only for demonstration */
+/*label {*/
+/*  color: #333333;*/
+/*}*/
+
+.button {
+  color: #f4f4f4
 }
 
+.create-post {
+  display: grid;
+}
 
-/* Clear floats after the columns */
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+.gide-post {
+  margin: 1em 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /*padding: 1em;*/
+  border-radius: 2px;
+  grid-gap: 1em;
+  grid-template-rows: minmax(100px, auto) auto;
 }
 
 textarea {
-    width: 100%;
-    height: 100%;
-    resize: none;
+  resize: none
+}
+
+.post-button {
+  grid-column: 1/3;
 }

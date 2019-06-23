@@ -1,0 +1,48 @@
+header {
+  background-color: #333333
+}
+
+.main-header {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  position: relative;
+}
+
+.left {
+  align-self: center;
+}
+
+.white {
+  background-color: #f4f4f4;
+  color: #333333;
+  font-weight: bold;
+}
+
+.right {
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: .5em;
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 1em;
+
+}
+
+.user-info > b {
+  align-self: center;
+}
+
+.login-google {
+  background-color: #d93025;
+  font-weight: bold;
+}
+
+.login-facebook {
+  background-color: #4267b2;
+  font-weight: bold;
+}
